@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #create new app
 echo "create new app"
