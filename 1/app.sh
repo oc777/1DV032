@@ -2,6 +2,7 @@
 
 #create new app
 echo "create new app"
+cd /vagrant
 rails new newapp
 
 cd newapp
