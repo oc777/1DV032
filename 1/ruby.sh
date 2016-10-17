@@ -2,7 +2,7 @@
 
 #https://gorails.com/setup/ubuntu/14.04
 
-ruby_v=$(cat ruby-v.txt)
+ruby_v=$(cat ./ruby-v.txt)
 
 echo "Setting up rvm and ruby $ruby_v"
 
