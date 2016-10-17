@@ -2,6 +2,10 @@
 
 #https://gorails.com/setup/ubuntu/14.04
 
+ruby_v=$(./.ruby-version)
+
+echo "Setting up rbenv and ruby $ruby_v"
+
 #install some dependencies for Ruby
 echo "install dependencies"
 sudo apt-get update > /dev/null 2>&1
@@ -23,9 +27,9 @@ source ~/.rvm/scripts/rvm
 
 #install ruby
 echo "install ruby"
-rvm install 2.3.1 > /dev/null 2>&1
+rvm install $ruby-v > /dev/null 2>&1
 
-rvm use 2.3.1 --default > /dev/null 2>&1
+rvm use $ruby-v --default > /dev/null 2>&1
 
 
 #install bundler & rails
