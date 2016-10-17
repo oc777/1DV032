@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 #https://gorails.com/setup/ubuntu/14.04
 
 #install some dependencies for Ruby
@@ -18,9 +15,9 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 echo "install rvm"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 > /dev/null 2>&1
 
-#
-echo progress-bar >> ~/.curlrc
+
 curl -sSL https://get.rvm.io | bash -s stable > /dev/null 2>&1
+echo progress-bar >> ~/.curlrc
 
 #load RVM
 source ~/.rvm/scripts/rvm
