@@ -2,7 +2,7 @@
 
 #https://gorails.com/setup/ubuntu/14.04
 
-ruby_v=$(./.ruby-version)
+ruby_v=$(. ./.ruby-version)
 
 echo "Setting up rbenv and ruby $ruby_v"
 
