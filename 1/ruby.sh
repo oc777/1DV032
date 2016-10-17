@@ -2,8 +2,8 @@
 
 #https://gorails.com/setup/ubuntu/14.04
 
-ruby_v=$(cat ./ruby-v.txt)
-
+#ruby_v=$(cat ./ruby-v.txt)
+ruby_v=2.3.1
 echo "Setting up rvm and ruby $ruby_v"
 
 #install some dependencies for Ruby
