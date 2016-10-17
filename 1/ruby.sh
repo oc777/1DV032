@@ -2,7 +2,7 @@
 
 #https://gorails.com/setup/ubuntu/14.04
 
-ruby-v=$(cat ./.ruby-v)
+ruby_v=$(cat ruby-v.txt)
 
 echo "Setting up rbenv and ruby $ruby_v"
 
@@ -27,9 +27,9 @@ source ~/.rvm/scripts/rvm
 
 #install ruby
 echo "install ruby"
-rvm install $ruby-v > /dev/null 2>&1
+rvm install $ruby_v > /dev/null 2>&1
 
-rvm use $ruby-v --default > /dev/null 2>&1
+rvm use $ruby_v --default > /dev/null 2>&1
 
 
 #install bundler & rails
