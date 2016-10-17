@@ -22,4 +22,4 @@ rake db:migrate
 
 #starting server
 echo "starting server"
-rails s
+rails s -b 0.0.0.0 -p 3000
