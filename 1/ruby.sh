@@ -7,6 +7,9 @@ echo "install dependencies"
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev > /dev/null 2>&1
 
+#For a progress bar when downloading RVM / Rubies:
+echo progress-bar >> ~/.curlrc
+
 
 #Install RVM:
 echo "install rvm"
@@ -20,6 +23,7 @@ source ~/.rvm/scripts/rvm
 echo "install ruby"
 rvm install 2.3.1 > /dev/null 2>&1
 rvm use 2.3.1 --default > /dev/null 2>&1
+
 
 #install bundler & rails
 #gem install bundler rails
@@ -35,4 +39,4 @@ sudo apt-get install -y nodejs > /dev/null 2>&1
 
 #install rails
 echo "install rails"
-gem install rails -v 4.2.6 > /dev/null 2>&1
+gem install rails -v 4.2.6 --no-ri --no-rdoc > /dev/null 2>&1
