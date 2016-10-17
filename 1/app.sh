@@ -20,3 +20,6 @@ echo "db create and migrate"
 #rails db:migrate
 rake db:migrate
 
+#starting server
+echo "starting server"
+rails server
