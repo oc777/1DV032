@@ -1,5 +1,12 @@
 # excercise-docker-nodejs-dev
 
+__To run tests__
+`docker run -i -t thajo/node /bin/bash /opt/app/script/test.sh`
+
+__To run app__
+`docker run -i -t -p 80:8080 thajo/node /bin/bash /opt/app/script/run.sh`
+
+
 In this exercise you should try to get a feeling of how to build and create a Docker container. The main idea with this exercise is to write a Dockerfile that will build a kind of development template for a node.js developer. The project template is located at this repository, to get the files to your exercise repo use the following commands:
 ```bash
 #First navigate to your exercise repository
