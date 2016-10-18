@@ -11,7 +11,7 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
 # From here we load our application's code in, therefore the previous docker
 # "layer" thats been cached will be used if possible
-VOLUME /opt/app
+WORKDIR /opt/app
 ADD . /opt/app
 
 #RUN mkdir -p /opt/app
