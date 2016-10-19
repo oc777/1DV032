@@ -27,7 +27,7 @@ services:
   todo:
     build: . #path to the Dockerfile
     #links:
-    depends_on
+    depends_on:
       - postgres
       - redis
     volumes:
