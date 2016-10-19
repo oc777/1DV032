@@ -10,13 +10,13 @@ services:
       POSTGRES_USER: todo
       POSTGRES_PASSWORD: yourpassword
     volumes:
-      - postgres-copy:/var/lib/postgresql/data
+      - postgres-vol:/var/lib/postgresql/data
 
   redis:
     image: redis:3.0.5
     ports: "6379:6379"
     volumes:
-      - redis-copy:/var/lib/redis/data
+      - redis-vol:/var/lib/redis/data
 
   todo:
     build: . #path to the Dockerfile
@@ -28,9 +28,10 @@ services:
     ports: "3000:3000"
     env_file: .todo.env
 
+  #http://serverfault.com/questions/761024/how-is-docker-compose-version-2-volumes-syntax-supposed-to-look
   volumes:
-    postgres-copy
-    redis-copy
+    postgres-vol:
+    redis-vol:
 
     
 
