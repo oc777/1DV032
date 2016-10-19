@@ -31,10 +31,10 @@ services:
       - "3000:3000"
     env_file: .todo.env
 
-  #http://serverfault.com/questions/761024/how-is-docker-compose-version-2-volumes-syntax-supposed-to-look
-  volumes:
-    postgresvol:
-    redisvol:
+#http://serverfault.com/questions/761024/how-is-docker-compose-version-2-volumes-syntax-supposed-to-look
+volumes:
+  postgresvol:
+  redisvol:
 
     
 
