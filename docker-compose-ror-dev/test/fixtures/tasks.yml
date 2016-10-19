@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  completed: false
+  created: 2016-10-19 20:52:19
+
+two:
+  name: MyString
+  completed: false
+  created: 2016-10-19 20:52:19
