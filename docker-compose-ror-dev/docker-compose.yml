@@ -5,28 +5,29 @@ services:
   
   postgres:
     image: postgres:9.4.5
-    #ports: 
-    #  - "5432:5432"
-    expose:
-      - "5432"
+    ports: 
+      - "5432:5432"
+    #expose:
+    #  - "5432"
     environment:
       POSTGRES_USER: todo
       POSTGRES_PASSWORD: yourpassword
     volumes:
-      - postgresvol:/var/lib/postgresql/data
+      - backup:/var/lib/postgresql/data
 
   redis:
     image: redis:3.0.5
-    #ports: 
-    #  - "6379:6379"
-    expose:
-      - "6379"
+    ports: 
+      - "6379:6379"
+    #expose:
+    #  - "6379"
     volumes:
-      - redisvol:/var/lib/redis/data
+      - cash:/var/lib/redis/data
 
   todo:
     build: . #path to the Dockerfile
-    links:
+    #links:
+    depends_on
       - postgres
       - redis
     volumes:
@@ -37,8 +38,8 @@ services:
 
 #http://serverfault.com/questions/761024/how-is-docker-compose-version-2-volumes-syntax-supposed-to-look
 volumes:
-  postgresvol:
-  redisvol:
+  backup:
+  cash:
 
     
 
