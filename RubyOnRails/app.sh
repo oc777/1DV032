@@ -1,24 +1,14 @@
 #!/bin/bash
 
 #create new app
-echo "create new app"
+echo "create hours app"
 cd /vagrant
-rails new newapp
 
-cd newapp
+git clone https://github.com/DefactoSoftware/Hours.git
+cd ./Hours
 
-#Bundle all the gems
-echo "Bundle all the gems"
-bundle install
+./bin/setup
 
-#generate scaffold
-echo "generate scaffold"
-rails generate scaffold HighScore game:string score:integer
-
-#Create and migrate the default sqlite3 
-echo "db create and migrate"
-#rails db:migrate
-rake db:migrate
 
 #starting server
 echo "starting server"
