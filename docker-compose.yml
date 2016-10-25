@@ -1,0 +1,44 @@
+
+version: "2"
+
+services:
+  
+  postgres:
+    image: postgres:9.4
+    environment:
+      USER: hours
+      PASSWORD: hours
+    volumes:
+      - db-vol:/var/lib/postgresql/data
+
+  cache:
+    image: memcached:1.4
+
+  hours:
+    build: . #path to the Dockerfile
+    #links:
+    depends_on:
+      - postgres
+      - cache
+    volumes:
+      - .:/hours
+    ports: 
+      - "8080:8080"
+    env_file: .env
+
+  worker:
+    env_file: .env
+    build: .
+    depends_on:
+      - postgres
+    volumes:
+      - .:/hours
+      command: bundle exec rake jobs:work
+
+volumes:
+  db-vol:
+
+
+    
+
+    
